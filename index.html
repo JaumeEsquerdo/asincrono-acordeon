@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="style-tab.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <ul class="ul">
+            <li class="li">Boton 1</li>
+            <li class="li">Boton 2</li>
+            <li class="li">Boton 3</li>
+        </ul>
+        <div class="subcontenedor">
+            <div class="bloque">Primera prueba del boton 1.</div>
+            <div class="bloque">Segunda prueba del boton 2.</div>
+            <div class="bloque">Esta es la 3º prueba del boton 3</div>
+        </div>
+    </div>
+
+
+    <script>
+const li = document.querySelectorAll('.li');
+const bloque = document.querySelectorAll('.bloque');
+
+//click en li
+        //todos .li quitar clase activo
+        //todos .bloque quitar clase activo
+        //.li con la poosicion le añadimos clase activo para que tenga otro color de activo
+        //.bloque con la posicion le añadimos la clase activo, para marcar el texto que le corresponde al boton seleccioando
+
+
+        //Recorremos todos los li
+        li.forEach( (cadaLi, i) => {
+            //asignamos el evento 'click' a todos los li
+            li[i].addEventListener('click',()=>{
+
+                
+                //recorrer otra vez los li
+                li.forEach((cadaLi, i)=>{
+                    //quitamos la clase activo de todos los li para que no se quede el anterior activo si cambiamos de boton
+                    li[i].classList.remove('activo')
+                    //hacemos lo mismo aprovechando el "li.forEach" al tener las mismas posiciones bloque que li
+                    bloque[i].classList.remove('activo')
+                })
+
+
+                // en el li que hacemos click añadimos la clase activo
+                li[i].classList.add('activo')
+                //en el bloque tambien añadimos clase activo
+                bloque[i].classList.add('activo')
+            })
+
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>
