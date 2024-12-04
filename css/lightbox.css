@@ -65,7 +65,7 @@ transform: scale(.95);
 .Lightbox .Close{
     
     width: 3rem;
-    color: bisque;
+    color: black;
     cursor: pointer;
     transition: all .4s ease;
 }
@@ -83,4 +83,3 @@ transform: scale(.95);
     height: 70vh;
     box-shadow: 0 5px 0 rgba(0, 0, 0, 0.4);
 }
-.material-symbols-outlined{}
