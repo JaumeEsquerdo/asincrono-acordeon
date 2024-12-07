@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acrodeon</title>
+    <meta name="author" content="Jaume Esquerdo">
+    <link rel="stylesheet" href="css/acordeon.css">
+
+</head>
+
+<body>
+    <div class="Acordeon">
+
+
+        <div class="Bloque Activo">
+            <h2 class="H2">Titular</h2>
+            <p class="Contenido">
+                holaaaaa esta es la primera una prueba
+
+            </p>
+        </div>
+
+
+        <div class="Bloque Activo">
+            <h2 class="H2">Titular</h2>
+            <p class="Contenido">
+                esta es la segunda prueba
+            </p>
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        const bloque = document.querySelectorAll('.Bloque');
+        const h2 = document.querySelectorAll('.H2');
+
+        //Cuando CLICK en h2,
+        //QUITAR la clase activo de TODOS los bloques
+        //AÑADIR la clase activo al bloque con la POSICION del H2
+
+        //Recorrer cada H2
+        h2.forEach( ( cadaH2, i) => {
+
+            //asignar un click a cada H2
+            h2[i].addEventListener('click', () => {
+
+                //recorrer cada Bloque
+                bloque.forEach( ( cadaBloque, i) => {
+
+                    //quitamos la clase activo a TODOS los bloques
+                    bloque[i].classList.remove('Activo')
+
+                });
+                //añadir la clase activo al bloque con la misma posición que el H2 cuyo click se ha dado en la linea 90 (el del addEventListener)
+                bloque[i].classList.add('Activo');
+
+
+            });
+
+
+
+
+        });
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

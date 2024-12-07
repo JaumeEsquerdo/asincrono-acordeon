@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Acordeon {
+    border-radius: 10px;
+
+    width: 80%;
+    background-color: aliceblue;
+    padding: 1em;
+    max-width: 120em;
+    margin: 50px auto;
+
+}
+
+.Acordeon .Bloque {
+    border-radius: 10px;
+
+    background-color: antiquewhite;
+    margin: 0 0 1em;
+    padding: 1em;
+
+}
+
+.Acordeon .H2 {
+    border-radius: 10px;
+    background-color: beige;
+    margin: 0 0 1em;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.Acordeon .Contenido {
+    border-radius: 10px;
+
+    background-color: bisque;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: height .6s ease-in;
+}
+
+.Acordeon .Bloque.Activo .Contenido {
+    height: 4em;
+}
